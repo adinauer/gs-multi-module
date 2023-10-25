@@ -1,0 +1,10 @@
+plugins {
+    id 'io.sentry.jvm.gradle' version '3.15.0-SNAPSHOT' apply false
+}
+
+//sentry {
+//    debug = true
+//    telemetry = true
+//    telemetryDsn = "http://localhost:1234"
+//    includeSourceContext = true
+//}

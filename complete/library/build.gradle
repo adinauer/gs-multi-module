@@ -2,6 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '3.0.0' apply false
 	id 'io.spring.dependency-management' version '1.1.0'
 	id 'java'
+	id 'io.sentry.jvm.gradle'
 }
 
 group = 'com.example'
@@ -21,4 +22,11 @@ dependencyManagement {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+sentry {
+	debug = true
+	telemetry = true
+	telemetryDsn = "http://localhost:2"
+	includeSourceContext = true
 }
